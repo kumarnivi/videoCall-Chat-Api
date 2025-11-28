@@ -17,7 +17,10 @@ const __dirname = path.resolve();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "https://video-call-chat-ui.vercel.app/login",
+      "http://localhost:5173",
+    ],
     credentials: true, // allow frontend to send cookies
   })
 );
