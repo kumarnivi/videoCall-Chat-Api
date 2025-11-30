@@ -97,7 +97,6 @@ export async function login(req, res) {
       user,
     });
 
-    res.status(200).json({ success: true, user });
   } catch (error) {
     console.log("Error in login controller", error.message);
     res.status(500).json({ message: "Internal Server Error" });
