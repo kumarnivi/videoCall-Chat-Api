@@ -90,6 +90,13 @@ export async function login(req, res) {
       secure: "none",
     });
 
+    // 🔥 Send token in response also
+    res.status(200).json({
+      success: true,
+      token,
+      user,
+    });
+
     res.status(200).json({ success: true, user });
   } catch (error) {
     console.log("Error in login controller", error.message);
