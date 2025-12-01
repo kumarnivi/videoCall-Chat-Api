@@ -15,7 +15,7 @@ const PORT = process.env.PORT;
 
 const __dirname = path.resolve();
 
-app.set("trust proxy", 1);
+app.set("trust proxy", true);
 
 
 app.use(
