@@ -15,11 +15,15 @@ const PORT = process.env.PORT;
 
 const __dirname = path.resolve();
 
+app.set("trust proxy", 1);
+
+
 app.use(
   cors({
     origin: [
-      "https://video-call-chat-ui.vercel.app",
       "http://localhost:5173",
+      "https://video-call-chat-ui.vercel.app"
+
     ],
     credentials: true, // allow frontend to send cookies
   })
